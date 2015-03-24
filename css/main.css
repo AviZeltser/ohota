@@ -287,7 +287,7 @@ a:active {
     background: rgba(255,255,255,.8);
     border-bottom: 3px solid #ff8700;
     padding: 36px 30px;
-    width: 260px;
+    width: 272px;
 }
 
 .promo-geo {
@@ -765,4 +765,137 @@ footer {
     margin-bottom: 10px;
 }
 
+.b-image__desc {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    background: rgba(255,255,255,.8);
+    padding: 36px 30px;
+    width: 272px;
+}
 
+.b-image__desc .promo__title {
+    margin-top: 0;
+}
+
+.b-image__desc .promo-btn {
+    width: 180px;
+}
+
+.b-base {
+
+}
+
+.b-tabs {
+
+}
+
+.b-tabs__list {
+    border-bottom: 2px solid #cdcbc9;
+    padding-bottom: 5px;
+}
+
+.b-tab__item {
+    background: #eaeaea;
+    border: 1px solid #cdcbc9;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    color: #202020;
+    padding: 5px 15px;
+    margin-right: -3px;
+    text-decoration: none;
+}
+
+.b-tab__item:hover, .b-tab__item.active {
+    background: #ff8700;
+    border-color: #ff8700;
+    color: #FFFFFF;
+}
+
+.b-tabs__inner {
+
+}
+
+.b-tabs__body.visible {
+    display: block;
+}
+
+.b-tabs__body {
+    display: none;
+}
+
+.text {
+    font-family: "Exo 2";
+    font-size: 14px;
+    line-height: 22px;
+    color: #202020;
+}
+
+.inner-title {
+    font-family: "Exo 2";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.album-item {
+    float: left;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.album-item.big {
+    width: 400px;
+    height: 300px;
+}
+
+.album-more {
+    position: relative;
+}
+
+.album-link {
+    position: absolute;
+    width: 192px;
+    height: 142px;
+    top: 0;
+    left: 0;
+    border: 4px solid #ff8700;
+    background: rgba(0,0,0,.5);
+}
+
+.album-title {
+    text-align: center;
+    font-size: 13px;
+    color: #FFFFFF;
+    font-family: "Exo 2";
+    width: 120px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 45px;
+}
+
+.album-title b {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.album-item:hover .album-item__inner{
+    display: block;
+}
+
+.album-item__inner {
+    position: absolute;
+    width: 192px;
+    height: 142px;
+    top: 0;
+    left: 0;
+    border: 4px solid #ff8700;
+    display: none;
+}
+
+.big .album-item__inner {
+    width: 392px;
+    height: 292px;
+}
