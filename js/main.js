@@ -1,35 +1,1 @@
-/**
- * Created by Avi on 24.02.2015.
- */
-
-$(document).ready(function() {
-    initMainSlider();
-    initTabs();
-})
-
-function initMainSlider() {
-    $('.js-promo-slides').flexslider({
-        animation: "slide"
-    });
-}
-
-function initTabs() {
-    $('.b-tab__item').on('click', function() {
-        $('.b-tab__item').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-        var iindex = $(this).data('index');
-        $('.b-tabs__body').each(function () {
-            $(this).removeClass('visible');
-            if($(this).data('parent') == iindex) {
-                $(this).addClass('visible');
-            }
-        })
-        console.log($(this).data('index'));
-    })
-}
-
-function stub() {
-
-}
+$(document).ready(function() {    initMainSlider();    initTabs();    stickySide();    callForm();    closeForm();})function initMainSlider() {    $('.js-promo-slides').flexslider({        animation: "slide"    });}function initTabs() {    $('.b-tab__item').on('click', function() {        $('.b-tab__item').each(function () {            $(this).removeClass('active');        })        $(this).addClass('active');        var iindex = $(this).data('index');        $('.b-tabs__body').each(function () {            $(this).removeClass('visible');            if($(this).data('parent') == iindex) {                $(this).addClass('visible');            }        })        console.log($(this).data('index'));    })}function stickySide() {if (!!$('.b-image__desc').offset()) { // make sure ".sticky" element exists    var stickyTop = $('.b-image__desc').offset().top; // returns number    $(window).scroll(function(){ // scroll event        var windowTop = $(window).scrollTop(); // returns number        if (stickyTop < windowTop){            $('.b-image__desc').addClass('fixed');        }        else {            $('.b-image__desc').removeClass('fixed');        }    });}}function stub() {}function callForm(e) {    $('.js-call-form').on('click', function() {        e.preventDefault();        if(!$('.tour-form').hasClass('show')) {            clearForm();            $('.tour-form').addClass('show');        }    })}function closeForm() {    $('.tour-form').removeClass('show');    clearForm();}function clearForm() {    $(".js-tour-form")[0].reset();}
